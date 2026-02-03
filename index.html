@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Detailing</title>
+    <style>
+        /* Reset osnovnih stvari */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: url('https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            z-index: 1;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            z-index: 1;
+            margin-top: 10px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            width: 100%;
+            background: rgba(0,0,0,0.7);
+            padding: 15px 0;
+            z-index: 10;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f39c12;
+        }
+
+        /* Section styles */
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #f39c12;
+        }
+
+        /* Usluge */
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .service-card {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .service-card img {
+            width: 100px;
+            margin-bottom: 15px;
+        }
+
+        /* Galerija */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Kontakt forma */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+
+        .contact-form button {
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background: #f39c12;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #e67e22;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Responsive */
+        @media(max-width:768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#services">Usluge</a>
+        <a href="#gallery">Galerija</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+
+    <header>
+        <div>
+            <h1>Auto Detailing Profesional</h1>
+            <p>Vaš automobil zaslužuje sjaj koji traje</p>
+        </div>
+    </header>
+
+    <section id="services">
+        <h2>Naše Usluge</h2>
+        <div class="services">
+            <div class="service-card">
+                <img src="https://img.icons8.com/ios-filled/100/000000/car-wash.png" alt="Pranje">
+                <h3>Detaljno pranje</h3>
+                <p>Unutrašnje i spoljašnje čišćenje sa profesionalnim proizvodima.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://img.icons8.com/ios-filled/100/000000/polish.png" alt="Poliranje">
+                <h3>Poliranje i voskiranje</h3>
+                <p>Obnavljamo sjaj i štitimo lak od spoljašnjih uticaja.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://img.icons8.com/ios-filled/100/000000/interior.png" alt="Unutrašnje čišćenje">
+                <h3>Unutrašnje čišćenje</h3>
+                <p>Dubinsko usisavanje, čišćenje tapacirunga i dezinfekcija.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Galerija</h2>
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1589391886646-0e1b1f1e29db?auto=format&fit=crop&w=600&q=80" alt="Auto 1">
+            <img src="https://images.unsplash.com/photo-1602024915900-cf76d4e2d7f0?auto=format&fit=crop&w=600&q=80" alt="Auto 2">
+            <img src="https://images.unsplash.com/photo-1563720224442-ff79e6223f15?auto=format&fit=crop&w=600&q=80" alt="Auto 3">
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Kontaktirajte nas</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Ime i prezime" required>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="5" placeholder="Poruka" required></textarea>
+            <button type="submit">Pošalji</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2026 Auto Detailing. Sva prava zadržana.
+    </footer>
+
+</body>
+</html>
