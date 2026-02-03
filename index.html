@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobilna Auto-Perionica</title>
     <style>
-        /* Reset osnovnih stvari */
         * {
             margin: 0;
             padding: 0;
@@ -69,10 +68,9 @@
         }
 
         nav a:hover {
-            color: #1a3d7c; /* tamno plavi naglasak */
+            color: #1a3d7c;
         }
 
-        /* Section styles */
         section {
             padding: 60px 20px;
             max-width: 1200px;
@@ -83,7 +81,7 @@
             text-align: center;
             margin-bottom: 40px;
             font-size: 2rem;
-            color: #1a3d7c; /* tamno plavi naglasak */
+            color: #1a3d7c;
         }
 
         /* Usluge */
@@ -113,21 +111,31 @@
             margin-bottom: 15px;
         }
 
-        /* Galerija */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        /* Zašto odabrati nas */
+        .benefits {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
         }
 
-        .gallery img {
-            width: 100%;
+        .benefit-card {
+            background: #eaf0ff;
+            padding: 20px;
             border-radius: 10px;
-            transition: transform 0.3s;
+            width: 280px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .gallery img:hover {
-            transform: scale(1.05);
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .benefit-card img {
+            width: 80px;
+            margin-bottom: 15px;
         }
 
         /* Kontakt forma */
@@ -151,7 +159,7 @@
             padding: 12px;
             border: none;
             border-radius: 5px;
-            background: #1a3d7c; /* tamno plava */
+            background: #1a3d7c;
             color: white;
             font-size: 1rem;
             cursor: pointer;
@@ -159,10 +167,9 @@
         }
 
         .contact-form button:hover {
-            background: #162e5a; /* tamnija plava za hover */
+            background: #162e5a;
         }
 
-        /* Footer */
         footer {
             background: #333;
             color: white;
@@ -170,16 +177,13 @@
             padding: 20px 0;
         }
 
-        /* Responsive */
         @media(max-width:768px) {
             header h1 {
                 font-size: 2rem;
             }
-
             header p {
                 font-size: 1rem;
             }
-
             nav a {
                 margin: 0 10px;
             }
@@ -190,7 +194,7 @@
 
     <nav>
         <a href="#services">Usluge</a>
-        <a href="#gallery">Galerija</a>
+        <a href="#benefits">Zašto odabrati nas</a>
         <a href="#contact">Kontakt</a>
     </nav>
 
@@ -205,29 +209,41 @@
         <h2>Naše Usluge</h2>
         <div class="services">
             <div class="service-card">
-                <img src="https://img.icons8.com/ios-filled/100/000000/van.png" alt="Mobilna perionica">
+                <img src="https://img.icons8.com/ios-filled/100/000000/car.png" alt="Mobilna perionica">
                 <h3>Pranje sa dolaskom</h3>
-                <p>Mi dolazimo do vas i detaljno peremo vaš automobil gde god da se nalazite.</p>
+                <p>Dolazimo do vas i detaljno peremo vaš automobil gde god da se nalazite.</p>
             </div>
             <div class="service-card">
-                <img src="https://img.icons8.com/ios-filled/100/000000/polish.png" alt="Poliranje">
+                <img src="https://img.icons8.com/ios-filled/100/000000/sparkle.png" alt="Poliranje i voskiranje">
                 <h3>Poliranje i voskiranje</h3>
-                <p>Obnavljamo sjaj i štitimo lak od spoljašnjih uticaja.</p>
+                <p>Obnavljamo sjaj vašeg automobila i štitimo lak od spoljašnjih uticaja.</p>
             </div>
             <div class="service-card">
-                <img src="https://img.icons8.com/ios-filled/100/000000/interior.png" alt="Unutrašnje čišćenje">
+                <img src="https://img.icons8.com/ios-filled/100/000000/seat.png" alt="Unutrašnje čišćenje">
                 <h3>Unutrašnje čišćenje</h3>
-                <p>Dubinsko usisavanje, čišćenje tapacirunga i dezinfekcija.</p>
+                <p>Dubinsko usisavanje, čišćenje tapacirunga i dezinfekcija kabine.</p>
             </div>
         </div>
     </section>
 
-    <section id="gallery">
-        <h2>Galerija</h2>
-        <div class="gallery">
-            <img src="https://images.unsplash.com/photo-1613921019381-5141e5c48f3b?auto=format&fit=crop&w=600&q=80" alt="BMW u autoperionici 1">
-            <img src="https://images.unsplash.com/photo-1602024915900-cf76d4e2d7f0?auto=format&fit=crop&w=600&q=80" alt="BMW u autoperionici 2">
-            <img src="https://images.unsplash.com/photo-1563720224442-ff79e6223f15?auto=format&fit=crop&w=600&q=80" alt="BMW u autoperionici 3">
+    <section id="benefits">
+        <h2>Zašto odabrati nas</h2>
+        <div class="benefits">
+            <div class="benefit-card">
+                <img src="https://img.icons8.com/ios-filled/80/000000/clock.png" alt="Brzina">
+                <h3>Brzo i efikasno</h3>
+                <p>Dolazimo do vas i završavamo pranje automobila brzo i kvalitetno.</p>
+            </div>
+            <div class="benefit-card">
+                <img src="https://img.icons8.com/ios-filled/80/000000/star.png" alt="Kvalitet">
+                <h3>Profesionalni kvalitet</h3>
+                <p>Koristimo samo profesionalne proizvode i alate za detaljno čišćenje.</p>
+            </div>
+            <div class="benefit-card">
+                <img src="https://img.icons8.com/ios-filled/80/000000/handshake.png" alt="Pouzdanost">
+                <h3>Pouzdanost</h3>
+                <p>Možete računati na nas – dolazimo u dogovoreno vreme i obavljamo posao besprekorno.</p>
+            </div>
         </div>
     </section>
 
